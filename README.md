@@ -1,46 +1,52 @@
-# PDF to Text
-A pdf to text wrapper. It works with searchable and non-searchable(images) PDF 
-##Prerequisite: Poppler
-1)  Mac Users
+# PDF-TO-TEXT
+A pdf to text wrapper to extract text from a pdf. It works with searchable and non-searchable(images) PDFs
 
-
-        $ brew install poppler
-2) Linux Users
-   
-       $ sudo apt-get update && sudo apt-get install poppler-utils
-
-3) Windows Users: No installation required
+![example workflow](https://github.com/fasatrix/pdf-to-text/actions/workflows/pdfToText.yaml/badge.svg)
 
 ##Installation
+`npm install text-from-pdf`
+### Mac Users
+`brew install poppler`
 
-      $ npm install text-from-pdf
-      $ import { pdfToText } from 'text-from-pdf';
+### Linux Users
+`sudo apt-get update && sudo apt-get install poppler-utils`
+
+### Windows Users
+`No installation required`
 
 ##Usage
 1) Standard Input PDF with horizontally aligned text:      
-      const text await pdfToText('./src/__tests__/pdf-files/pdf-example-bookmarks.pdf');
-      console.log(text)
+      ```
+       const text await pdfToText('<PATH_TO_PDF_FILE/fileName.pdf>');
+       console.log(text)
+     ```
 2)  Input PDF's with vertically aligned text:
-
-            const options: IConversionOptions = {
-               rotationDegree: -90,
-            };
-            $ const text await pdfToText('./src/__tests__/pdf-files/pdf-example-bookmarks.pdf', options);
-            $ console.log(text)
+       ```  
+        const options = {
+          rotationDegree: -90,
+        };
+        $ const text await pdfToText('<PATH_TO_PDF_FILE/fileName.pdf>', options);
+        $ console.log(text)
+       ```
 3)  Text from first and second page:
-
-            const options: IConversionOptions = {
-               firstPageToConvert: 1,
-               lastPageToConvert: 2,
-            };
-            $ const text await pdfToText('./src/__tests__/pdf-files/pdf-example-bookmarks.pdf', options);
-            $ console.log(text)
+       ```  
+        const options = {
+           firstPageToConvert: 1,
+           lastPageToConvert: 2,
+        };
+        $ const text await pdfToText('<PATH_TO_PDF_FILE/fileName.pdf>', options);
+        $ console.log(text)
+       ```
 4)  Text from third to fifth page:
+       ```  
+        const options = {
+           firstPageToConvert: 3,
+           lastPageToConvert: 5,
+        };
+        $ const text await pdfToText('<PATH_TO_PDF_FILE/fileName.pdf>', options);
+        $ console.log(text)
+       ```
+##Usage
+Fork, add your changes and create Pull request 
 
-            const options: IConversionOptions = {
-               firstPageToConvert: 3,
-               lastPageToConvert: 5,
-            };
-            $ const text await pdfToText('./src/__tests__/pdf-files/pdf-example-bookmarks.pdf', options);
-            $ console.log(text)
        
