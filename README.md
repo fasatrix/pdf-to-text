@@ -4,7 +4,6 @@ A pdf to text wrapper to extract text from a pdf. It works with searchable and n
 ![PDF CI](https://github.com/fasatrix/pdf-to-text/actions/workflows/pdfToText.yaml/badge.svg)
 
 ### Installation
-
 `npm install text-from-pdf`
 
 ### Mac Users
@@ -48,7 +47,7 @@ A pdf to text wrapper to extract text from a pdf. It works with searchable and n
         $ const text await pdfToText('<PATH_TO_PDF_FILE/fileName.pdf>', options);
         $ console.log(text)
        ```
-##Usage
+## Usage
 Fork, add your changes and create Pull request 
 
        
