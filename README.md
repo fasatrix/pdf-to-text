@@ -9,10 +9,12 @@
        $ sudo apt-get update && sudo apt-get install poppler-utils
 
 3) Windows Users: No installation required
+
 ##Installation
 
       $ npm install text-from-pdf
       $ import { pdfToText } from 'text-from-pdf';
+
 ##Usage
 1) Standard Input PDF with horizontally aligned text:      
       const text await pdfToText('./src/__tests__/pdf-files/pdf-example-bookmarks.pdf');
