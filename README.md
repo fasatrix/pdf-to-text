@@ -1,10 +1,12 @@
 # PDF-TO-TEXT
 A pdf to text wrapper to extract text from a pdf. It works with searchable and non-searchable(images) PDFs
 
-![example workflow](https://github.com/fasatrix/pdf-to-text/actions/workflows/pdfToText.yaml/badge.svg)
+![PDF CI](https://github.com/fasatrix/pdf-to-text/actions/workflows/pdfToText.yaml/badge.svg)
 
-##Installation
+###Installation
+
 `npm install text-from-pdf`
+
 ### Mac Users
 `brew install poppler`
 
@@ -14,7 +16,7 @@ A pdf to text wrapper to extract text from a pdf. It works with searchable and n
 ### Windows Users
 `No installation required`
 
-##Usage
+###Usage
 1) Standard Input PDF with horizontally aligned text:      
       ```
        const text await pdfToText('<PATH_TO_PDF_FILE/fileName.pdf>');
