@@ -68,29 +68,29 @@ interface IImageProps {
   pngFile: boolean;
 }
 export interface IConversionOptions {
-/**
- * Description: The first page from th input PDF to convert
- * @default 1
- */
+  /**
+   * Description: The first page from th input PDF to convert
+   * @default 1
+   */
   firstPageToConvert?: number;
-/**
- * Description: Last  page from th input PDF to convert
- * @default 1
- */
+  /**
+   * Description: Last  page from th input PDF to convert
+   * @default 1
+   */
   lastPageToConvert?: number;
-/**
- * Description: The angle in degrees to be used to rotate the PDF
- * @default 0
- */
+  /**
+   * Description: The angle in degrees to be used to rotate the PDF
+   * @default 0
+   */
   rotationDegree?: number;
-/**
- * Description: The text regnognition language
- * @default engglish
- */
+  /**
+   * Description: The text regnognition language
+   * @default engglish
+   */
   language?: string;
-/**
- * Description: The full path of the Poppler installation
- * @default none - If not passed installation path will be set to platform's default installation
- */
+  /**
+   * Description: The full path of the Poppler installation
+   * @default none - If not passed installation path will be set to platform's default installation
+   */
   popplerFullPath?: string;
 }
