@@ -1,0 +1,46 @@
+{
+  "name": "text-from-pdf",
+  "version": "1.0.0",
+  "description": "A PDF to Text Extractor",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" ",
+    "lint": "tslint -p tsconfig.json",
+    "test": "jest --config jestconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fasatrix/pdf-to-text.git"
+  },
+  "keywords": [
+    "pdf to text",
+    "non searchable pdf",
+    "searchable pdf",
+    "pdf text extractor"
+  ],
+  "author": "Fabio Santoro",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/fasatrix/pdf-to-text/issues"
+  },
+  "homepage": "https://github.com/fasatrix/pdf-to-text#readme",
+  "dependencies": {
+    "@supercharge/fs": "^3.4.0",
+    "jimp": "^0.16.1",
+    "node-poppler": "^5.1.1",
+    "tesseract.js": "^2.1.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "jest": "^27.4.4",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.5.3"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
