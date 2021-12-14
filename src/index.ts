@@ -17,7 +17,7 @@ async function convertPdfToPng(
   } else if (process.platform === 'darwin') {
     poppler = new Poppler('/usr/local/Cellar/poppler/21.12.0/bin');
   } else if (process.platform === 'linux') {
-    poppler = new Poppler('/usr/local/Cellar/poppler/21.12.0/bin');
+    poppler = new Poppler();
   } else {
     poppler = new Poppler();
   }
