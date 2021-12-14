@@ -1,7 +1,7 @@
 import { pdfToText, IConversionOptions } from '../index';
 
 describe('Text from the first and second page', () => {
-  let options: IConversionOptions = {
+  const options: IConversionOptions = {
     firstPageToConvert: 1,
     lastPageToConvert: 2,
   };

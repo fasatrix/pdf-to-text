@@ -1,13 +1,18 @@
 {
-  "name": "text-from-pdf",
+  "name": "pdfToText",
   "version": "1.0.0",
   "description": "A PDF to Text Extractor",
   "main": "index.js",
   "scripts": {
+    "test": "jest --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" ",
     "lint": "tslint -p tsconfig.json",
-    "test": "jest --config jestconfig.json"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
