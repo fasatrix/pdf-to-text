@@ -1,4 +1,5 @@
-# PDF to Test
+# PDF to Text
+A pdf to text wrapper. It works with searchable and non-searchable(images) PDF 
 ##Prerequisite: Poppler
 1)  Mac Users
 
