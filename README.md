@@ -3,7 +3,7 @@ A pdf to text wrapper to extract text from a pdf. It works with searchable and n
 
 ![PDF CI](https://github.com/fasatrix/pdf-to-text/actions/workflows/pdfToText.yaml/badge.svg)
 
-###Installation
+### Installation
 
 `npm install text-from-pdf`
 
@@ -16,7 +16,7 @@ A pdf to text wrapper to extract text from a pdf. It works with searchable and n
 ### Windows Users
 `No installation required`
 
-###Usage
+### Usage
 1) Standard Input PDF with horizontally aligned text:      
       ```
        const text await pdfToText('<PATH_TO_PDF_FILE/fileName.pdf>');
