@@ -2,7 +2,7 @@
   "name": "text-from-pdf",
   "version": "1.0.0",
   "description": "A PDF to Text Extractor",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
