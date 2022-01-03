@@ -1,9 +1,6 @@
 name: CI API
 on:
   push:
-    paths:
-      - 'src/**'
-
   pull_request:
     paths:
       - 'src/**'
