@@ -4,6 +4,7 @@ import Jimp from 'jimp';
 import { Poppler } from 'node-poppler';
 import Tesseract from 'tesseract.js';
 import util from 'util';
+import { progressbar } from '../src/utils/utils';
 
 async function convertPdfToPng(
   inputFileName: string,
@@ -55,7 +56,20 @@ export async function pdfToText(inputFileName: string, options?: IConversionOpti
     i++
   ) {
     await flipImage(i, outputFileName, options?.rotationDegree ?? 0);
-    await Tesseract.recognize(`${outputFileName}-${i}.png`, options?.language ?? 'eng').then(({ data: { text } }) => {
+    await Tesseract.recognize(
+      `${outputFileName}-${i}.png`,
+      options?.language ?? 'eng',
+      options?.enableProgressBarLogging
+        ? {
+            logger:  (m) => {
+              process.stdout.write("\u001b[3J\u001b[2J\u001b[1J");
+              if (m.progress !== 1) {
+                process.stdout.write(`Text extraction progress for page ${i} is at: ${progressbar(m.progress)}%`);
+              }
+            },
+          }
+        : { logger: (m) => null },
+    ).then(({ data: { text } }) => {
       finalText.push(text);
     });
   }
@@ -93,4 +107,9 @@ export interface IConversionOptions {
    * @default none - If none passed, it will be set to the platform's default installation (e.g. /usr/bin for Ubuntu etc.)
    */
   popplerFullPath?: string;
+  /**
+   * Description: The text recognition' logger
+   * @default false - By default the logger is switched off.
+   */
+  enableProgressBarLogging?: boolean;
 }

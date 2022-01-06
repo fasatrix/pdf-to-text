@@ -1,6 +1,6 @@
 import { pdfToText, IConversionOptions } from '../index';
 
-describe.only('Text from rotated PDF', () => {
+describe('Text from rotated PDF', () => {
   const options: IConversionOptions = {
     rotationDegree: -90,
   };

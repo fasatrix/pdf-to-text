@@ -4,6 +4,7 @@ describe('Text from the first and second page', () => {
   const options: IConversionOptions = {
     firstPageToConvert: 1,
     lastPageToConvert: 2,
+    enableProgressBarLogging: true,
   };
   it('it should output the expected text', async () => {
     const text = await pdfToText('./src/__tests__/pdf-files/pdf-example-bookmarks.pdf', options);

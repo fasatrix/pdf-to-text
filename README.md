@@ -47,6 +47,16 @@ A pdf to text wrapper to extract text from a pdf. It works with searchable and n
         $ const text = await pdfToText('<PATH_TO_PDF_FILE/fileName.pdf>', options);
         $ console.log(text)
        ```
+4)  Enable Progressbar logging:
+       ```  
+        const options = {
+           firstPageToConvert: 1,
+           lastPageToConvert: 1,
+           enableProgressBarLogging: true
+        };
+        $ const text = await pdfToText('<PATH_TO_PDF_FILE/fileName.pdf>', options);
+        $ console.log(text)
+       ```    
 
 ## Usage
 Fork, add your changes and create a pull request 
