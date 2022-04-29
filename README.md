@@ -58,7 +58,7 @@ A pdf to text wrapper to extract text from a pdf. It works with searchable and n
         $ console.log(text)
        ```    
 
-## Usage
+## Features request
 Fork, add your changes and create a pull request 
 
        
