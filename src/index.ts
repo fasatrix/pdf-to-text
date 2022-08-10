@@ -59,12 +59,14 @@ export async function pdfToText(inputFileName: string, options?: IConversionOpti
     await Tesseract.recognize(
       `${outputFileName}-${i}.png`,
       options?.language ?? 'eng',
-      options?.enableProgressBarLogging
+      options?.enableProgressLogging
         ? {
             logger:  (m) => {
-              process.stdout.write("\u001b[3J\u001b[2J\u001b[1J");
               if (m.progress !== 1) {
-                process.stdout.write(`Text extraction progress for page ${i} is at: ${progressbar(m.progress)}%`);
+                process.stdout.clearLine(0)
+                process.stdout.write("\u001b[3J\u001b[2J\u001b[1J");
+                console.clear();
+                process.stdout.write(`Text recognition progress for page ${i}: ${progressbar(m.progress)}%`);
               }
             },
           }
@@ -111,5 +113,5 @@ export interface IConversionOptions {
    * Description: The text recognition' logger
    * @default false - By default the logger is switched off.
    */
-  enableProgressBarLogging?: boolean;
+  enableProgressLogging?: boolean;
 }
