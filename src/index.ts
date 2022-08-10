@@ -5,6 +5,7 @@ import { Poppler } from 'node-poppler';
 import Tesseract from 'tesseract.js';
 import util from 'util';
 import { progressbar } from '../src/utils/utils';
+import * as readline from 'readline';
 
 async function convertPdfToPng(
   inputFileName: string,
@@ -61,16 +62,17 @@ export async function pdfToText(inputFileName: string, options?: IConversionOpti
       options?.language ?? 'eng',
       options?.enableProgressLogging
         ? {
-            logger:  (m) => {
+            logger: (m) => {
               if (m.progress !== 1) {
-                process.stdout.clearLine(0)
-                process.stdout.write("\u001b[3J\u001b[2J\u001b[1J");
+                readline.clearLine(process.stdout, 0);
+                process.stdout.write('\u001b[3J\u001b[2J\u001b[1J');
+                // tslint:disable-next-line:no-console
                 console.clear();
                 process.stdout.write(`Text recognition progress for page ${i}: ${progressbar(m.progress)}%`);
               }
             },
           }
-        : { logger: (m) => null },
+        : { logger: () => null },
     ).then(({ data: { text } }) => {
       finalText.push(text);
     });
