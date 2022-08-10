@@ -4,7 +4,7 @@ import Jimp from 'jimp';
 import { Poppler } from 'node-poppler';
 import Tesseract from 'tesseract.js';
 import util from 'util';
-import { progressbar } from '../src/utils/utils';
+import { progressbar } from './utils/utils';
 import * as readline from 'readline';
 
 async function convertPdfToPng(

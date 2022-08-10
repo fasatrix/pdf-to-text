@@ -1,6 +1,6 @@
 {
   "name": "text-from-pdf",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "description": "A PDF to Text Extractor",
   "main": "lib/index.js",
   "scripts": {
