@@ -34,7 +34,7 @@
     "@supercharge/fs": "^3.4.0",
     "jimp": "^0.16.1",
     "node-poppler": "^6.0.0",
-    "tesseract.js": "^3.0.2"
+    "tesseract.js": "^4.0.0"
   },
   "devDependencies": {
     "@types/jest": "^27.0.3",
